@@ -5,6 +5,15 @@ h1 {
 	font-size: 50px;
 	font-family: arial;
 }
+#scoreVal {
+	position: relative;
+	top: -50px;
+	font-size: 15px;
+	color: red;
+	font-family: arial;
+	text-align: center;
+	font-weight: bold;
+}
 #table table {
 	position: relative;
 	top: -30px;
@@ -14,10 +23,22 @@ h1 {
 #table table tr td {
 	border: 1px solid black;
 	width: 50px;
+	margin: -2px;
 	height: 50px;
+}
+#table .top {
+	position: relative;
+	top: -3px;
+	height: 5px;
 }
 #table .button {
 	border-radius: 10px;
+}
+#table .button[data-on=off]  {
+	background-color: lightpink;
+}
+#table .button[data-on=on]  {
+	background-color: darkgreen;
 }
 td[data-on=off]  {
 	background-color: white;
@@ -44,11 +65,12 @@ td[data-on=on]  {
 	width: 50px;
 	margin-left: auto;
 	margin-right: auto;
-	text-align: center;
-	font-size: 20px;
+	margin-bottom: 10px;
 	padding: 10px;
 	border-radius: 5px;
 	background-color: rgb(0, 200, 0);
+	text-align: center;
+	font-size: 20px;
 }
 .pageButton:hover {
 	background-color: rgb(0, 255, 0);
