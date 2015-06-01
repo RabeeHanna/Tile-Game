@@ -1,7 +1,6 @@
-var COLUMNS 	= 4,
-	ROWS 		= 8,
-	BUTTON_BG 	= 'lightgreen',
-	SPEED		= 350;
+var COLUMNS = 4;
+var	ROWS = 8;
+var	INTERVAL = 350;
 
 var gameInterval;
 
@@ -21,6 +20,10 @@ function createTable(columns, rows) {
 	html += "</table>"
 	$("#table").html(html);
 	$("#table tr td").attr('data-on', 'off');
+}
+
+function clearTable() {
+	$("#table").empty();
 }
 
 function getTile(column, row) {
@@ -66,11 +69,17 @@ function moveUp() {
 	});
 }
 
-$(function() {
+function start() {
 	createTable(COLUMNS, ROWS);
 	$('.button').click(buttonHandler);
 	$(window).unload(function() {
 		clearInterval(gameInterval);
-	})
-	gameInterval = setInterval(moveUp, SPEED);
-});
+	});
+	gameInterval = setInterval(moveUp, INTERVAL);
+}
+
+function end() {
+	clearInterval(gameInterval);
+	$('.button').off('click', buttonHandler);
+	clearTable();
+}

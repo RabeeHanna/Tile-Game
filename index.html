@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="utf-8"/> 
 		<link rel="stylesheet" href="style.css">
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-		<script src="script.js"></script>
+		<script src="game.js"></script>
+		<script src="page.js"></script>
 		<title>Tiles</title>
 	</head>
 	<body>
 		<h1>Tile Game!</h1>
-		<div id="table"></div>
+		<div class="section" id="main">
+			<h2>Welcome to the Tile Game.</h2>
+			<div id="playButton" class="pageButton">Play!</div>
+		</div>
+		<div class="section" id="game" hidden="hidden">
+			<div id="table"></div>
+			<div id="backButton" class="pageButton">Back</div>
+		</div>
 	</body>
 </html>
