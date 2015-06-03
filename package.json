@@ -1,0 +1,28 @@
+{
+  "name": "Tile-Game",
+  "version": "1.0.0",
+  "description": "A sick multiplayer game.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RabeeHanna/Tile-Game.git"
+  },
+  "keywords": [
+    "tile",
+    "game",
+    "multiplayer"
+  ],
+  "author": "Rabee Hanna",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RabeeHanna/Tile-Game/issues"
+  },
+  "homepage": "https://github.com/RabeeHanna/Tile-Game",
+  "dependencies": {
+    "express": "^4.12.4",
+    "socket.io": "^1.3.5"
+  }
+}
